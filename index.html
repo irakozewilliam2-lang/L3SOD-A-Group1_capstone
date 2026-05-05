@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fast Food Delivery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #ff7a00;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .text {
+      max-width: 50%;
+      animation: slideInLeft 1s ease;
+    }
+
+    .text h2 {
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .text h1 {
+      font-size: 60px;
+      font-weight: 700;
+      margin: 10px 0;
+    }
+
+    .text p {
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .image {
+      animation: fadeIn 2s ease;
+    }
+
+    .image img {
+      width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .image img:hover {
+      transform: scale(1.05);
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 80px;
+      align-items: center;
+    }
+
+    .bottom-text {
+      max-width: 50%;
+      animation: slideInUp 1.5s ease;
+    }
+
+    .bottom-text h3 {
+      font-weight: 300;
+    }
+
+    .bottom-text h1 {
+      font-size: 50px;
+      margin-top: 10px;
+    }
+
+    .food-gallery {
+      display: flex;
+      gap: 15px;
+    }
+
+    .food-gallery img {
+      width: 120px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .food-gallery img:hover {
+      transform: translateY(-10px);
+    }
+
+    /* Animations */
+    @keyframes slideInLeft {
+      from {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInUp {
+      from {
+        transform: translateY(100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .top, .bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text, .bottom-text {
+        max-width: 100%;
+      }
+
+      .image img {
+        width: 250px;
+        margin-top: 20px;
+      }
+
+      .food-gallery {
+        margin-top: 20px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="top">
+  <div class="text">
+    <h2>REAL FAST FOOD</h2>
+    <h1>DELIVERY</h1>
+    <p>
+      We bring fast, hot, and delicious meals straight to your door.
+      Enjoy premium food with speed and quality.
+    </p>
+  </div>
+
+  <div class="image">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Food">
+  </div>
+</div>
+<div class="bottom">
+  <div class="bottom-text">
+    <h3>OUR BEST ONE</h3>
+    <h1>YET!</h1>
+    <p>
+      Taste the deliciousness. Carefully crafted meals made for real food lovers.
+    </p>
+  </div>
+
+  <div class="food-gallery">
+    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349">
+    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+    <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086">
+  </div>
+</div>
+
+  </div>
+
+</body>
+</html>
