@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #ff7a00, #ff3c00);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  color: white;
+}
+
+.navbar a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* GLASS CARD */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  padding: 50px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.content {
+  width: 50%;
+  color: white;
+  animation: fadeIn 1.5s ease;
+}
+
+.small-text {
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.big-text {
+  font-size: 80px;
+  font-weight: bold;
+}
+
+.intro {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.cta-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+/* IMAGE */
+.image-container {
+  width: 50%;
+  position: relative;
+}
+
+/* STRONG GLOW */
+.image-container::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,255,255,0.6), transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(60px);
+}
+
+/* IMAGE */
+.image-container img {
+  width: 100%;
+  max-width: 450px;
+  animation: float 3s infinite ease-in-out;
+  position: relative;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
